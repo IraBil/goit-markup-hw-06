@@ -532,7 +532,6 @@ textarea {
     border: 1px solid var(--iris);
 }
 
-
 .subscribe-button {
     width: 163px;
     height: 40px;
@@ -665,7 +664,7 @@ textarea {
 
     opacity: 0;
     transition: transform var(--time_animation),
-                opacity var(--time_animation);
+    opacity var(--time_animation);
 }
 
 .filter-cards-text {
@@ -746,7 +745,6 @@ textarea {
 }
 
 .close-modal-icon {
-
     fill: black;
 
     transition: fill var(--time_animation);
@@ -834,12 +832,14 @@ textarea {
 }
 
 .comment-frame:hover,
-.comment-frame:focus {
+.comment-frame:focus, 
+.comment-frame:checked {
     border: 1px solid var(--iris);
 }
 
 .form-frame:hover,
-.form-frame:focus {
+.form-frame:focus,
+.form-frame:checked {
     border: 1px solid var(--iris);
 }
 
@@ -909,4 +909,28 @@ textarea {
 .checkbox-line {
     display: flex;
     align-items: center;
+}
+
+.checkbox {
+    position: absolute;
+    appearance: none;
+}
+
+.checkbox-custom {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+.checkbox:checked+.checkbox-custom,
+.checkbox-custom:checked {
+    background-color: var(--ocean);
+    background-image: url(../images/Property\ 1=click.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--ocean);
 }
