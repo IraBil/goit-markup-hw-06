@@ -49,6 +49,7 @@ textarea {
     --gray-border-icon: #8E8F99;
     --green: #31D0AA;
     --time_animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --text-checkbox: #757575;
 }
 
 .container {
@@ -505,6 +506,64 @@ textarea {
     background-color: var(--green);
 }
 
+.footer-subscribe {
+    padding-left: 80px;
+}
+
+.subscribe-input {
+    height: 40px;
+    width: 264px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--basic-black);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: border var(--time_animation);
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus {
+    border: 1px solid var(--iris);
+}
+
+
+.subscribe-button {
+    width: 163px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em; 
+    margin-left: 24px;
+    border-radius: 4px;
+    border: none;
+    padding: 0px 24px;
+    text-align: start;
+        
+    background-color: var(--iris);
+    color: var(--wight-button);
+
+    transition: background-color var(--time_animation);
+}
+
+.footer-subscribe-icon {
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 2px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: var(--ocean);
+}
+
+
 .title {
     color: var(--basic-black);
     font-weight: 500;
@@ -666,7 +725,7 @@ textarea {
     transform: translate(-50%, -50%);    
 
     width: 408px;
-    height: 576px;
+    height: 584px;
     background-color: var(--wight-modal);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -722,12 +781,25 @@ textarea {
     flex-direction: column;
 }
 
+.form-field input {
+    margin: 0 0;
+}
+
+.form-field textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
 .form-text-04 {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
     color: var(--gray-border-icon);
+    margin-bottom: 4px;
 }
 
 .form-text-01 {
@@ -736,13 +808,53 @@ textarea {
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: var(--gray-border-icon);
+    margin-bottom: 4px;
 }
 
 .form-frame {
+    position: relative;
+    
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px; 
-    margin-top: 4px;
     height: 40px;
+    padding-left: 38px;
+
+    transition: border var(--time_animation);
+}
+
+.comment-frame {
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 16px;
+
+    transition: border var(--time_animation);
+}
+
+.comment-frame:hover,
+.comment-frame:focus {
+    border: 1px solid var(--iris);
+}
+
+.form-frame:hover,
+.form-frame:focus {
+    border: 1px solid var(--iris);
+}
+
+.form-icon {
+    position: absolute;
+    fill: var(--basic-black);
+    margin-top: 28px;
+    margin-left: 19px;
+
+    transition: fill var(--time_animation);
+}
+
+.form-field:hover svg,
+.form-field:focus svg {
+    fill: var(--iris)
 }
 
 .modal-send {
@@ -773,4 +885,28 @@ textarea {
 .modal-send:hover,
 .modal-send:focus {
     background: var(--ocean);
+}
+
+.privacy-policy {
+    color: var(--iris);
+    text-decoration: underline;
+}
+
+.form-text-checkbox {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--text-checkbox);
+}
+
+.checkbox-line input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.checkbox-line {
+    display: flex;
+    align-items: center;
 }

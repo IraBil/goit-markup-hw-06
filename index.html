@@ -394,6 +394,17 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+
+            <div class="footer-subscribe">
+                <p class="footer-media-text">Subscribe</p>
+                <input type="text" name="user-name" id="user-name" class="subscribe-input" placeholder="E-mail"/>
+                <button class="subscribe-button">
+                    Subscribe
+                    <svg class="footer-subscribe-icon" width="24" height="20">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg>                      
+                </button> 
 
             </div>
         </div>
@@ -412,31 +423,40 @@
                 <div class="form-field">
                     <label for="user-name" class="form-text-04">Name</label>
                     <input type="text" name="user-name" id="user-name" class="form-frame" />
+                    <svg class="form-icon" width="12" height="12">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
                 </div>
 
                 <div class="form-field">
-                    <label for="phone" class="form-text-04">Phone</label>
+                    <label for="phone" class="form-text-01">Phone</label>
                     <input type="text" name="phone" id="phone" class="form-frame" />
+                    <svg class="form-icon" width="13" height="13">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
                 </div>
 
                 <div class="form-field">
-                    <label for="email" class="form-text-04">Email</label>
+                    <label for="email" class="form-text-01">Email</label>
                     <input type="text" name="email" id="email" class="form-frame" />
-                </div>
-
-                <div >
-                    <input type="checkbox" name="" value="" id="consent" />
-                    <label for="consent" class="form-text-04">I accept the terms and conditions of the Privacy Policy</label>
+                    <svg class="form-icon" width="12" height="12">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
                 </div>
 
                 <div  class="form-field">
                     <label for="comment" class="form-text-01">Comment</label>
-                    <textarea name="comment" id="comment" placeholder="Text input"></textarea>
+                    <textarea  name="comment" id="comment" placeholder="Text input" class="comment-frame"></textarea>
+                </div>
+
+                <div class="checkbox-line">
+                    <input type="checkbox" name="" value="" id="consent" />
+                    <label for="consent" class="form-text-checkbox">I accept the terms and conditions of the <a href="'" class="privacy-policy">Privacy Policy</a></label>
                 </div>
 
                 <button tipe="submit" class="modal-send">Send</button>
             </form>
-        </div>
+            
     </div>
     <script src="./js/modal.js"></script>
 </body>
