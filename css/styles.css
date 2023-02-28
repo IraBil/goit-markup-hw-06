@@ -769,12 +769,11 @@ textarea {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--basic-black);
-    margin-top: 48px;
+    padding-top: 48px;
     margin-bottom: 16px;
 }
 
 .form-field {
-    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
 }
@@ -798,6 +797,7 @@ textarea {
     letter-spacing: 0.04em;
     color: var(--gray-border-icon);
     margin-bottom: 4px;
+    /* margin-top: 8px;     */
 }
 
 .form-text-01 {
@@ -807,17 +807,33 @@ textarea {
     letter-spacing: 0.01em;
     color: var(--gray-border-icon);
     margin-bottom: 4px;
+    margin-top: 8px;
+}
+
+.form-icon-relative {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .form-frame {
-    position: relative;
-    
+    /* position: relative;       */
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px; 
     height: 40px;
     padding-left: 38px;
 
     transition: border var(--time_animation);
+}
+
+.form-icon {
+    position: absolute;
+    fill: var(--basic-black);
+    /* top: 50%; */
+    transform: translateY(50%);
+    margin-left: 19px;
+
+    transition: fill var(--time_animation);
 }
 
 .comment-frame {
@@ -831,25 +847,21 @@ textarea {
     transition: border var(--time_animation);
 }
 
-.comment-frame:hover,
-.comment-frame:focus, 
-.comment-frame:checked {
+.comment-frame:hover {
+    cursor: pointer;
+    border: 1px solid var(--iris);
+}
+
+/* .comment-frame:focus, */
+.comment-frame:checked textarea {
+    /* cursor: pointer; */
     border: 1px solid var(--iris);
 }
 
 .form-frame:hover,
-.form-frame:focus,
-.form-frame:checked {
+.form-frame:focus {
+    cursor: pointer;
     border: 1px solid var(--iris);
-}
-
-.form-icon {
-    position: absolute;
-    fill: var(--basic-black);
-    margin-top: 28px;
-    margin-left: 19px;
-
-    transition: fill var(--time_animation);
 }
 
 .form-field:hover svg,
@@ -928,9 +940,19 @@ textarea {
 
 .checkbox:checked+.checkbox-custom,
 .checkbox-custom:checked {
+    cursor: pointer;
     background-color: var(--ocean);
     background-image: url(../images/Property\ 1=click.svg);
     background-size: contain;
     background-origin: border-box;
     border-color: var(--ocean);
 }
+
+.checkbox:hover,
+.checkbox:focus,
+.form-text-checkbox:hover,
+.form-text-checkbox:focus,
+.modal-send:hover {
+    cursor: pointer;
+}
+
