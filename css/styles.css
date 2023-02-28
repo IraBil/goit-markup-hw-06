@@ -528,7 +528,9 @@ textarea {
 }
 
 .subscribe-input:hover,
-.subscribe-input:focus {
+.subscribe-input:focus-within {
+    cursor: pointer;
+    outline: none;
     border: 1px solid var(--iris);
 }
 
@@ -559,6 +561,7 @@ textarea {
 
 .subscribe-button:hover,
 .subscribe-button:focus {
+    cursor: pointer;
     background-color: var(--ocean);
 }
 
@@ -852,14 +855,15 @@ textarea {
     border: 1px solid var(--iris);
 }
 
-/* .comment-frame:focus, */
-.comment-frame:checked textarea {
+.comment-frame:focus-within {
+    outline: none;
     /* cursor: pointer; */
     border: 1px solid var(--iris);
 }
 
 .form-frame:hover,
-.form-frame:focus {
+.form-frame:focus-within {
+    outline: none;
     cursor: pointer;
     border: 1px solid var(--iris);
 }
